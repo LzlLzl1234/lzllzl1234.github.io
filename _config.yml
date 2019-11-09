@@ -1,122 +1,75 @@
+# Basic
+title: 潘柏信
+subtitle: 个人站
+description: 欢迎来到我的个人站~
+# 头像里面的标题
+avatarTitle: leopardpan
+# 头像里面的描述
+avatarDesc: iOS / 机器学习
+url: "http://baixin.io"
+
+# Comment
+comment:
+    disqus: leopard
+    # gitment: xxx // 需要修改 comments.html中的client_id和client_secret
+    # uyan: 2143225  # 有言id,登录有言官网申请
+
+# Social
+social:
+    weibo: 5366874726 
+    github: leopardpan
+    # zhihu: panpanleopard
+    # juejin: xxx
+    jianshu: 2ada30d8d0f7
+    # twitter: 
+    mail: leopardpan@icloud.com
+
+
+# 百度统计 
+# 使用博客模板请去掉或者更换 id 
+baidu:
+    id: xxxx  
+
+# Google Analytics
+# 使用博客模板请去掉或者更换 id
+ga:
+    id: xxxx  
+    host: auto  
+
+
+# 《----------------- 上面的信息修改成你自己的 ---------------------------》
 #
-# 这个文档包含了本博客的设定信息，你可以编辑它来个性化自己的博客，
 #
-
-# 你的博客名称，请用你想要的博客名替换“LOFFER”，以下修改都可类似处理
-# 注意，“name: LOFFER”，冒号后面的空格不可以省略。
-# 井号后面的文字是说明文档，不会被程序读取。
-name: LOFFER
-# 描述/签名
-description: 一个可以fork的博客
-
+#  _post/ 下的文章更换成你自己的文章
+#  帮忙star一下，感谢~😆 地址： https://github.com/leopardpan/leopardpan.github.io
 #
-# 下面的设定都是可选的
 #
-
-# 你的博客logo图片URL，建议尺寸不超过300px × 300px
-avatar: https://raw.githubusercontent.com/FromEndWorld/LOFFER/master/images/logo.png
-
-# 你的favicon（出现在浏览器tab上）图片URL，建议使用较小(64px × 64px)的图片
-favicon: https://raw.githubusercontent.com/FromEndWorld/LOFFER/master/images/favicon.png
+# 《--------------- 下面的信息可以自行选择是否修改 ------------------------》
 
 
-# 菜单中的按钮
-navigation:
-  - name: 首页
-    url: /
-  - name: 关于
-    url: /about
-  - name: 归档
-    url: /archive
-  - name: 标签
-    url: /tags
+permalink: /:year/:month/:title/
+# Format
+highlighter: rouge
 
-# 每页的文章数
-paginate: 8
+textColor: #FF0000
 
-# 文章简介的区分标记
-excerpt_separator: <!-- more -->
+# supported colors: blue, green, purple, red, orange or slate. If you need clear, leave it empty.
+cover_color: clear
 
-# 你的社交网络链接，它们会作为图标出现在你的网站页脚中，可选填写
-footer-links: 
-  weibo: frommidworld #请输入你的微博个性域名 https://www.weibo.com/<thispart>
-  behance: # https://www.behance.net/<>
-  dribbble: # https://dribbble.com/<>
-  email: fromendworld@outlook.com 
-  facebook: #https://www.facebook.com/<>
-  flickr: #https://www.flickr.com/<>
-  github: FromEndWorld/loffer #https://github.com/<>
-  instagram: #https://instagram.com/<>
-  linkedin: #https://www.linkedin.com/in/<>
-  pinterest: #https://www.pinterest.com/<>
-  rss: #随便填点啥RSS就能用了
-  stackoverflow: # http://stackoverflow.com/<>
-  tumblr: # https://<username>.tumblr.com
-  twitter: # https://www.twitter.com/<your_twitter_username> 
-  youtube: # channel/<your_long_string> or user/<user-name>
+# The blog button should not be removed.
+blog_button:
+    title: 博客主页
 
-# 站点页脚的文字
-footer-text: Copyright (c) 2019 来自中世界
+# Navigation buttons in the front page.s
+nav:
+    - {title: 所有文章, description: archive, url: '/archive'}   
+    - {title: 标签, description: tags, url: '/tags'}      
+    - {title: 关于我, description: about, url: '/about'}      
+    
 
-# 评论，注意，请不要同时添加多种不同的评论区
+# Pagination
+gems: [jekyll-paginate,jekyll-sitemap]
+paginate: 20
+paginate_path: "page/:num/"
 
-# 输入Disqus shortname，即可添加评论区
-disqus: loffer #shortname
-
-# 输入Gitalk相关设定，即可添加评论区
-gitalk:
-  clientID: 
-  clientSecret: 
-  repo: 
-  owner: 
-
-# 输入Google Analytics web tracking code
-google_analytics:
-
-# 输入你的网站域名（如果你没有添加自己的域名，而是直接用GitHub pages分配的域名的话可以省略）
-url: 
-
-# 添加你的博客的二级域名，一般来说是你的repository名
-# 如果你的博客的URL是：(http://yourusername.github.io/repository-name)
-# 那么就写成 "/repository-name"
-baseurl: /LOFFER
-
-
-#
-# !! 以下所有设置都不需要更改 !!
-#
-
-permalink: /:title/
-paginate_path: /page:num/
-
-# The release of Jekyll Now that you're using
-version: v1.2.0
-
-# Jekyll 3 now only supports Kramdown for Markdown
-kramdown:
-  # Use GitHub flavored markdown, including triple backtick fenced code blocks
-  input: GFM
-  # Jekyll 3 and GitHub Pages now only support rouge for syntax highlighting
-  syntax_highlighter: rouge
-  syntax_highlighter_opts:
-    # Use existing pygments syntax highlighting css
-    css_class: 'highlight'
-
-# Set the Sass partials directory, as we're using @imports
-sass:
-  style: :expanded # You might prefer to minify using :compressed
-
-# Use the following plug-ins
-plugins:
-  - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
-  - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
-  - jekyll-paginate
-
-# Exclude these files from your production _site
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - LICENSE
-  - README.md
-  - CNAME
 
